@@ -1,0 +1,52 @@
+.background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: var(--orange);
+    overflow: hidden;
+
+}
+
+.gradient-sphere{
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    background:  radial-gradient(circle, #FF6361 30%, #ff646100 70%) ;;
+    border-radius: 50%;
+
+}
+.top-right{
+    top: -60vw;
+    right: -40vw;
+    animation: animationTop 12s ease-in-out infinite;
+}
+.bottom-left{
+    bottom: -60vw;
+    left: -50vw;
+    animation: animationBottom 13s ease-in-out infinite;
+}
+
+
+
+@keyframes animationTop {
+    0%, 100% {
+        transform: translate(0,0);
+
+    }
+    50% {
+        transform: translate(20vw,50vw); /* Adjust the value for the distance you want */
+
+    }
+}
+
+@keyframes animationBottom {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50vw); /* Adjust the value for the distance you want */
+    }
+}
