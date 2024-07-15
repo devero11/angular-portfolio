@@ -12,9 +12,9 @@
 .gradient-sphere{
     
     position: fixed;
-    width: 100vw;
-    height: 100vw;
-    background:  radial-gradient(circle, #FF6361 30%, #ff646100 70%) ;;
+    width: calc(max(100vw,100vh));
+    height: calc(max(100vw,100vh));
+    background:  radial-gradient(circle, rgba(255, 100, 97, 0.829) 30%, #ff646100 65%) ;;
     border-radius: 50%;
 
 }
@@ -37,7 +37,7 @@
 
     }
     50% {
-        transform: translate(20vw,50vw); /* Adjust the value for the distance you want */
+        transform: translate(20vw,100vh); /* Adjust the value for the distance you want */
 
     }
 }
@@ -47,6 +47,6 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-50vw); /* Adjust the value for the distance you want */
+        transform: translateY(-100vh); /* Adjust the value for the distance you want */
     }
 }
