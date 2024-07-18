@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @Component({
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
 
 
   img = {x : 0, y:0}
@@ -16,9 +16,20 @@ export class AboutMeComponent {
   yOld =0
   coeficientX = 0
   coeficientY = 0
+
+  winX=0
+  winY=0
+
+  ngOnInit(): void {
+    this.winX=window.innerWidth
+    this.winY=window.innerHeight
+  }
+
+
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-
+    this.winX=window.innerWidth
+    this.winY=window.innerHeight
     let x = event.clientX
     let y = event.clientY
 

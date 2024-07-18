@@ -8,6 +8,8 @@
 
   @font-face {
     font-family: 'Myriad';
-    src: url('./assets/font/1.otf') format('opentype');
-
+    /* src: url('./assets/font/1.otf') format('opentype'); */
+    src: url('./assets/font/WhiteRabbit-47pD.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
