@@ -1,0 +1,114 @@
+.container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.797);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20%;
+
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.line{
+    width: 0.20vw;
+    background-color: var(--orange) !important;
+    height: 35vw;
+    max-height: 60dvh;
+    border-radius: 1vw;
+
+}
+div{
+    color: var(--orange);
+    font-family: 'Myriad';
+}
+.expertise{
+    color: white;
+    font-size: 3.2vw;
+}
+.text{
+    padding-left: 1vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.quote{
+    display: flex;
+
+}
+.white{
+    color:white;
+}
+.button .sphere{
+    width: 1vw;
+    height: 1vw;
+    position: absolute;
+    margin-left: -20vw;
+    margin-bottom: -10vw;
+    background-color: white;
+    border-radius: 50%;
+   
+}
+.button{
+    width: 22vh;
+    height: 7vh;
+    font-size: 2vh;
+    margin-top: 3vh;
+}
+.button .sphere{
+    margin-bottom: -10vh;
+    margin-left: -25vh;
+}
+.button:hover .sphere{
+    width: 50vh ;
+    height: 50vh;
+}
+.button:hover {
+    color: black;
+    transition: box-shadow 0.25s ease-in-out,color 0.5s ease-in-out;
+
+}
+.button:hover .sphere{
+    width: 50vw ;
+    height: 50vw;
+    transition: width 0.5s ease-in-out, height 0.5s ease-out;
+
+}
+
+.sphere{
+    transition: width 0.5s ease-out, height 0.5s ease-out;
+
+}
+
+.button div{
+    position: absolute;
+    color: white;
+}
+.button:hover div{
+    position: absolute;
+    color: var(--orange);
+}
+.button{
+    animation: fadeInfo 2.1s 0.4s ease-out;
+    transition: box-shadow 0.25s ease-in-out,color 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: var(--orange);
+    color: black !important;
+    width: 13vw;
+    height: 4vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25vw;
+    margin-top: 2vw;
+    font-variation-settings: 'wght' 500, 'wdth' 90;
+    
+}

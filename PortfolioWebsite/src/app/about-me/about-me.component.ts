@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
+
+
 @Component({
   selector: 'app-about-me',
   standalone: true,
@@ -8,7 +14,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent implements OnInit,AfterViewInit {
 
 
   img = {x : 0, y:0}
@@ -25,6 +31,10 @@ export class AboutMeComponent implements OnInit {
     this.winY=window.innerHeight
   }
 
+  ngAfterViewInit(): void {
+
+    this.fadeAnimation()
+  }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
@@ -48,4 +58,32 @@ export class AboutMeComponent implements OnInit {
     this.xOld = event.clientX
     this.yOld = event.clientY
   }
+
+  fadeAnimation(): void {
+    gsap.to(".amc",
+      {
+        scrollTrigger: {
+          trigger: ".trigger",
+          start:'top top',
+          end:'bottom top',
+          scrub: 1
+        },
+        opacity: '0',
+        duration: 30
+      }
+    )
+    gsap.to(".amc",
+      {
+        scrollTrigger: {
+          trigger: ".amc",
+          start:'0',
+          end:'100%',
+          scrub: 1
+        },
+        y: '-5%',
+        duration: 30
+      }
+    )
+  }
+
 }
