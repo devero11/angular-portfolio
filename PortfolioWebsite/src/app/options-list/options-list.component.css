@@ -1,14 +1,23 @@
+.sticky{
+    height: 400vh;
+    margin-top: 150vh;
+    overflow: visible;
+}
 .container{
-    position: fixed;
-    height: 100%;
+    position: sticky;
+
+
+    height: 100dvh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.797);
+    background-color: rgb(0, 0, 0);
     top: 0;
-    left: 0;
+
     display: flex;
     align-items: center;
     justify-content: left;
     padding-left: 20%;
+    z-index: 100;
+    box-sizing: border-box;
 
 }
 .content{
@@ -16,11 +25,11 @@
     flex-direction: row;
 }
 .line{
-    width: 0.20vw;
+    width: 0.30vh;
     background-color: var(--orange) !important;
-    height: 35vw;
+    height: 50vh;
     max-height: 60dvh;
-    border-radius: 1vw;
+    border-radius: 2vh;
 
 }
 div{
@@ -28,45 +37,57 @@ div{
     font-family: 'Myriad';
 }
 .expertise{
+    isolation: isolate;
     color: white;
-    font-size: 3.2vw;
+    font-size: 5vh;
+
 }
 .text{
-    padding-left: 1vw;
+
+    padding-left: 2vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 .quote{
     display: flex;
-
+    font-size: 1.8vh;
 }
 .white{
     color:white;
 }
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 4vh;
+}
 .button .sphere{
-    width: 1vw;
-    height: 1vw;
+    width: 2vh;
+    height: 2vh;
     position: absolute;
-    margin-left: -20vw;
-    margin-bottom: -10vw;
+    margin-left: -37vh;
+    margin-bottom: -20vh;
     background-color: white;
     border-radius: 50%;
    
 }
 .button{
-    width: 22vh;
+
+    width: fit-content;
+    margin-right: 1.4vh;
     height: 7vh;
-    font-size: 2vh;
-    margin-top: 3vh;
+    font-size: 24vh;
+
 }
 .button .sphere{
     margin-bottom: -10vh;
     margin-left: -25vh;
 }
 .button:hover .sphere{
-    width: 50vh ;
-    height: 50vh;
+    width: 100vh ;
+    height: 100vh;
 }
 .button:hover {
     color: black;
@@ -74,26 +95,31 @@ div{
 
 }
 .button:hover .sphere{
-    width: 50vw ;
-    height: 50vw;
+    width: 100vh ;
+    height: 100vh;
     transition: width 0.5s ease-in-out, height 0.5s ease-out;
 
 }
 
 .sphere{
     transition: width 0.5s ease-out, height 0.5s ease-out;
-
+    position: absolute;
 }
 
-.button div{
-    position: absolute;
+.buttonText{
+    position: relative;
     color: white;
+
 }
-.button:hover div{
-    position: absolute;
+.button:hover .buttonText{
+    position: relative;
+    
+    z-index: 100;
     color: var(--orange);
 }
 .button{
+    padding-left: 3vh;
+    padding-right: 3vh;
     animation: fadeInfo 2.1s 0.4s ease-out;
     transition: box-shadow 0.25s ease-in-out,color 0.5s ease-in-out;
     cursor: pointer;
@@ -101,14 +127,14 @@ div{
     overflow: hidden;
     background: var(--orange);
     color: black !important;
-    width: 13vw;
-    height: 4vw;
+    width: fit-content;
+    height: 8vh;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 1.25vw;
-    margin-top: 2vw;
+    font-size: 2.2vh;
+    margin-bottom: 2vh;
     font-variation-settings: 'wght' 500, 'wdth' 90;
     
 }

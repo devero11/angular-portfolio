@@ -68,8 +68,10 @@ export class AboutMeComponent implements OnInit,AfterViewInit {
           end:'bottom top',
           scrub: 1
         },
-        opacity: '0',
-        duration: 30
+        opacity: '0.0',
+        duration: 30,
+        
+        pointerEvents : 'none'
       }
     )
     gsap.to(".amc",
@@ -77,10 +79,11 @@ export class AboutMeComponent implements OnInit,AfterViewInit {
         scrollTrigger: {
           trigger: ".amc",
           start:'0',
-          end:'100%',
+          end:'200%',
           scrub: 1
         },
-        y: '-5%',
+        y: '40%',
+        scale: 0.6,
         duration: 30
       }
     )
